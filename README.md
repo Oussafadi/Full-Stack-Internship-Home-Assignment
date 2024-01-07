@@ -67,7 +67,7 @@ Respect the following design flow:
 
 ## Back-End
 
-- Used Postgres Database to store the employees data .
+- Used Postgres Database to store the employees data .     
 -**Run Instructions ** : Run the potsgres dabatase service , run the back-end application , and to run the front-end application : npm install and npm run dev
 the app will start on port 3000 .      
 
@@ -190,7 +190,7 @@ export const saveCSV = (formData) => {
  }
 ```
 
---*Components folder* : For reusability and to have a more readable code.
+--*Components folder* : For reusability and to have a more readable code.      
 ![compoenent-assignement](https://github.com/Oussafadi/Full-Stack-Internship-Home-Assignment/assets/96580119/36c43a85-57a4-4af0-b38a-df18e046f254)
 
 

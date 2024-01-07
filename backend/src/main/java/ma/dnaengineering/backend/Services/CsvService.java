@@ -1,5 +1,7 @@
 package ma.dnaengineering.backend.Services;
 
+import ma.dnaengineering.backend.Models.Employee;
+
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
@@ -19,5 +21,13 @@ public interface CsvService<T> {
     /*
       Calculate  the average salary for each job title.
      */
-    HashMap<String, Double> averageSalaryForEachJobTitle(List<T> employees);
+    HashMap<String, Double> averageSalaryForEachJobTitle(List<T> objects);
+
+
+    /*
+     Stores all the CSV Data
+     */
+    void save(List<T> objects);
+
+    List<T> getAll();
 }

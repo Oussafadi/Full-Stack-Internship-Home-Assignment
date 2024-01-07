@@ -7,9 +7,13 @@ export const csvParserApi = axios.create(
 )
 
 export const saveCSV = (formData) => {
-    csvParserApi.post('/process-csv' ,formData , {
+   return  csvParserApi.post('/process-csv' ,formData , {
         headers : {
             "content-type" : "multipart/form-data"
         }
     }) ;
 }
+
+ export const getData = () => {
+     return csvParserApi.get('/get-data');
+ }

@@ -1,7 +1,9 @@
 package ma.dnaengineering.backend.Services;
 
 import ma.dnaengineering.backend.Models.Employee;
+import ma.dnaengineering.backend.Repositories.EmployeeRepository;
 import ma.dnaengineering.backend.Utils.FileReader;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.InputStream;
@@ -12,6 +14,12 @@ import java.util.stream.Collectors;
 
 @Service
 public class CsvServiceImp implements CsvService<Employee>{
+     private EmployeeRepository repository ;
+
+     @Autowired
+     public CsvServiceImp (EmployeeRepository repository) {
+         this.repository = repository;
+     }
 
     @Override
     public List<Employee> processLocalFile(String path) {
@@ -65,6 +73,16 @@ public class CsvServiceImp implements CsvService<Employee>{
 
 
         return summary;
+    }
+
+    @Override
+    public void save(List<Employee> employees) {
+        repository.saveAll(employees);
+    }
+
+    @Override
+    public List<Employee> getAll() {
+        return repository.findAll();
     }
 
 

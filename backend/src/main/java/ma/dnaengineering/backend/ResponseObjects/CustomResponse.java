@@ -1,4 +1,4 @@
-package ma.dnaengineering.backend.Controllers;
+package ma.dnaengineering.backend.ResponseObjects;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,4 +16,5 @@ import java.util.List;
 public class CustomResponse {
     private List<Employee> employees;
     private HashMap<String, Double> summary;
+    String message="" ;
 }

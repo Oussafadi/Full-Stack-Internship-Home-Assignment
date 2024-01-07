@@ -164,7 +164,8 @@ public interface CsvService<T> {
 ```
 
 --* Unit Tests * : Wrote unit test  for the service layer .
-image here
+![test-assignements](https://github.com/Oussafadi/Full-Stack-Internship-Home-Assignment/assets/96580119/ae9bbab9-3a8c-4e21-8b29-b2b7b563813f)
+
 
 
 ###Front-End :
@@ -190,13 +191,25 @@ export const saveCSV = (formData) => {
 ```
 
 --*Components folder* : For reusability and to have a more readable code.
-image2 here 
+![compoenent-assignement](https://github.com/Oussafadi/Full-Stack-Internship-Home-Assignment/assets/96580119/36c43a85-57a4-4af0-b38a-df18e046f254)
+
 
 
 
 ### DEMO :
+--- When the back-end app is off :
+![assignement-1](https://github.com/Oussafadi/Full-Stack-Internship-Home-Assignment/assets/96580119/1f9e0bb6-265c-41fb-8c0d-2b797252f20d)
 
+--- Interface 1 :
+![assignement-2](https://github.com/Oussafadi/Full-Stack-Internship-Home-Assignment/assets/96580119/5c8a335c-3b2b-4ac9-bb81-02cb31e6c707)
 
+--Interface 2 :
+![assignement-3](https://github.com/Oussafadi/Full-Stack-Internship-Home-Assignment/assets/96580119/9ce301f0-6d50-4401-a2cd-739e15a3b415)
+
+-- Interface 3 :
+![assignement-4](https://github.com/Oussafadi/Full-Stack-Internship-Home-Assignment/assets/96580119/10239de6-4b1b-47a0-a087-be17e24deb8c)
+![assignement-5](https://github.com/Oussafadi/Full-Stack-Internship-Home-Assignment/assets/96580119/44009960-efd1-431f-a790-9edb891f6a5f)
+![assignement-6](https://github.com/Oussafadi/Full-Stack-Internship-Home-Assignment/assets/96580119/3c0a8860-2456-4743-a0b9-0b8f85b079f8)
 
 
 

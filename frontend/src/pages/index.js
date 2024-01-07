@@ -37,7 +37,6 @@ export default function Home() {
   }
 
   const handleProcess = async () => {
-    setMessage(null);
 
     if(employees.length > 0 && summary.length > 0 ) {
       setMessage("Data is already processed");
@@ -48,6 +47,8 @@ export default function Home() {
         const response = await saveCSV(formData);
        converBackEndDataToArray(response.data.employees, response.data.summary);
        setMessage(response.data.message);
+        setIsCsvUploaded(false);
+        setCsvFile(null);
       } catch (e) {
         setMessage("Could not process your CSV file");
         console.log(e);
@@ -60,7 +61,7 @@ export default function Home() {
     setEmployees(employees.map(e =>({"id": e.id , "employee_name" : e.employee_name , "job_title" : e.job_title , "salary": e.salary})));
     setSummary(Object.entries(summary).map(([jobTitle, salary]) => ({
       job_title: jobTitle,
-      salary: salary,
+      salary: salary.toFixed(3),
     })));
   }
 
@@ -78,7 +79,7 @@ export default function Home() {
         <UploadForm handleSubmit={handleSubmit} handleProcess={handleProcess}
         csvFile={csvFile} setCsvFile={setCsvFile} isCsvUploaded={isCsvUploaded}/>
 
-        <div className=' flex flex-row mt-8  '>
+        <div className=' ml-5 flex flex-row mt-8  '>
           { employees.length >0 &&
                 <div className='basis-2/3'>
                   <h2 className=' text-3xl text font-bold ml-4 '> Employees :</h2>
